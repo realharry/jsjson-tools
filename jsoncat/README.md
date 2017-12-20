@@ -25,6 +25,12 @@ jsoncat -i=4 json-file1 json-file2 ...
 
 The `-i` or `--indent` flag sets the indentation level when printing out the JSON files.
 
+For usage info, try:
+
+```bash
+jsoncat -h
+```
+
 
 ## License
 
