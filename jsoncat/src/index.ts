@@ -143,7 +143,7 @@ const synopsis = `NAME
        jsoncat - concatenate json files and print on the standard output
 
 SYNOPSIS
-       jsoncat [OPTION]... JSONFILE [JSONFILE]...
+       jsoncat [OPTION]... [JSONFILE]...
 
 DESCRIPTION
        Concatenate and pretty-print JSONFILE(s) to standard output.
