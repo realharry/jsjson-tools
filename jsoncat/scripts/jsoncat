@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+var jsoncat = require('../dist/index.js');
+jsoncat;
+
