@@ -1,10 +1,7 @@
 import * as readline from 'readline';
-// import fs = require('fs');
 import * as fs from 'fs';
 // import { readFile, readFileSync } from 'fs';
-// var os = require("os");
 import { EOL } from 'os';
-// import minimist = require('minimist');
 import * as minimist from 'minimist';
 // import { ParsedArgs } from 'minimist';
 
@@ -18,6 +15,7 @@ export class JsonCat {
     private indent: number = 2,
     private merge: boolean = false
   ) {
+    // TBD: Is it safe to reuse rl???
     this.rl = readline.createInterface({
       input: process.stdin,
       output: process.stdout,
@@ -187,7 +185,7 @@ REPORTING BUGS
 COPYRIGHT
        Copyright © 2017 Harry Y. License MIT.
        This is free software: you are free to change and redistribute it.
-       There is NO WARRANTY, to the  extent  permitted by law.
+       There is NO WARRANTY, to the extent permitted by law.
 `;
 
 // var argv: ParsedArgs = minimist(process.argv.slice(2));
