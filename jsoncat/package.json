@@ -12,8 +12,11 @@
   },
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
-  "dependencies": {},
+  "dependencies": {
+    "minimist": "^1.2.0"
+  },
   "devDependencies": {
+    "@types/minimist": "^1.2.0",
     "@types/node": "^7.0.42",
     "ts-node": "^2.1.2",
     "tslint": "^4.5.1",

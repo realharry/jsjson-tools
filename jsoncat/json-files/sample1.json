@@ -1,0 +1,9 @@
+{
+  "key1": {
+    "subkey11": "value11"
+  },
+  "key2": [
+    "element1",
+    "element2"
+  ]
+}
