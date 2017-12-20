@@ -65,7 +65,7 @@ export class JsonCat {
 }
 
 // TBD: Keep this in sync with package.json.
-const version = '0.1';
+const version = '0.5';
 const versionInfo = `jsoncat ${version}
 Copyright (C) Harry Y. License MIT.
 This is free software: you are free to change and redistribute it.
@@ -107,7 +107,7 @@ AUTHOR
 
 REPORTING BUGS
        JsJson online help: <https://gitlab.com/jsjson/>
-       Report jsoncat bugs to <https://gitlab.com/jsjson/jsoncat/issues>
+       Report jsoncat bugs to <https://gitlab.com/jsjson/tools/issues>
 
 COPYRIGHT
        Copyright © 2017 Harry Y. License MIT.
@@ -160,7 +160,6 @@ if (helpRequested) {
   // Files.
   var files = argv._;
   // console.log(args);
-
 
   var jsonCat = new JsonCat(files, indent, merge);
   jsonCat.doCat();

@@ -1,6 +1,6 @@
 {
   "name": "@jsjson/jsoncat",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "license": "MIT",
   "keywords": [
     "json",
@@ -12,7 +12,7 @@
     "email": "sidewaybot@gmail.com",
     "url": "https://gitlab.com/realharry"
   },
-  "repository": "https://gitlab.com/jsjson/jsoncat.git",
+  "repository": "https://gitlab.com/jsjson/tools.git",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
