@@ -146,7 +146,7 @@ export class JsonCmp {
 }
 
 // TBD: Keep this in sync with package.json.
-const version = '0.1';
+const version = '0.5';
 const versionInfo = `jsoncmp ${version}
 Copyright (C) Harry Y. License MIT.
 This is free software: you are free to change and redistribute it.
