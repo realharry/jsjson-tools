@@ -83,6 +83,7 @@ export class JsonHead {
           let json = JSON.stringify(nobj, null, self.indent);
           // console.log('json = ' + json);
           process.stdout.write(json + EOL);
+          // process.stdin.end();   // ???
         })
       } else {
         fs.readFile(f, 'utf8', function (err, content) {
@@ -97,6 +98,7 @@ export class JsonHead {
           } else {
             console.log('err = ' + err);
           }
+          process.stdin.end();   // ???
         });
       }
     } else {
@@ -128,14 +130,15 @@ export class JsonHead {
         let json = JSON.stringify(nobj, null, this.indent);
         // console.log('json = ' + json);
         process.stdout.write(json + EOL);
+        process.stdin.end();   // ???
       }
     }
-    process.stdin.end();   // ???
+    // process.stdin.end();   // ???
   }
 }
 
 // TBD: Keep this in sync with package.json.
-const version = '0.1';
+const version = '0.5';
 const versionInfo = `jsonhead ${version}
 Copyright (C) Harry Y. License MIT.
 This is free software: you are free to change and redistribute it.
@@ -158,7 +161,7 @@ DESCRIPTION
               print the first NUM nodes/elements instead of the first 4
 
        -i, --indent=INDENT
-              set indent level to INDENT. The default value is 2.
+              set indent level to INDENT. The default value is 2
 
        -q, --quiet
               never print headers giving file names

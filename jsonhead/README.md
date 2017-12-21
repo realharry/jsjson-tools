@@ -23,7 +23,7 @@ The NPM package installs an executable `jsonhead` in your PATH.
 Run the script as follows:
 
 ```bash
-jsonhead -n4 json-file1 json-file2 ...
+jsonhead -n2 json-file1 json-file2 ...
 ```
 
 `jsonhead` print the first 4 nodes/elements of each JSONFILE to standard output
