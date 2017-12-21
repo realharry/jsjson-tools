@@ -81,6 +81,7 @@ export class JsonCat {
           let json = JSON.stringify(obj, null, self.indent);
           // console.log('json = ' + json);
           process.stdout.write(json + EOL);
+          // process.stdin.end();   // ???
         })
       } else {
         fs.readFile(f, 'utf8', function (err, content) {
@@ -94,6 +95,7 @@ export class JsonCat {
           } else {
             console.log('err = ' + err);
           }
+          process.stdin.end();   // ???
         });
       }
     } else {
@@ -130,8 +132,9 @@ export class JsonCat {
       let json = JSON.stringify(jsonArr, null, this.indent);
       // console.log('json = ' + json);
       process.stdout.write(json + EOL);
+      process.stdin.end();   // ???
     }
-    process.stdin.end();   // ???
+    // process.stdin.end();   // ???
   }
 }
 
