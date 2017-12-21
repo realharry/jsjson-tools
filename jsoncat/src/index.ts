@@ -131,6 +131,7 @@ export class JsonCat {
       // console.log('json = ' + json);
       process.stdout.write(json + EOL);
     }
+    process.stdin.end();   // ???
   }
 }
 
