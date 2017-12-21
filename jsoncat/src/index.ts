@@ -51,7 +51,7 @@ export class JsonCat {
 
       // tbd: readFromStdin() currently does not work.
       // let obj = this.readFromStdin();
-      // let json = JSON.stringify(obj, null, indent);
+      // let json = JSON.stringify(obj, null, this.indent);
       // // console.log('json = ' + json);
       // process.stdout.write(json + EOL);
 
@@ -62,7 +62,7 @@ export class JsonCat {
       }).on('close', function () {
         // console.log('close: content = ' + content);
         let obj = JSON.parse(content);
-        let json = JSON.stringify(obj, null, indent);
+        let json = JSON.stringify(obj, null, this.indent);
         // console.log('json = ' + json);
         process.stdout.write(json + EOL);
       })
@@ -76,7 +76,7 @@ export class JsonCat {
         }).on('close', function () {
           // console.log('close: content = ' + content);
           let obj = JSON.parse(content);
-          let json = JSON.stringify(obj, null, indent);
+          let json = JSON.stringify(obj, null, this.indent);
           // console.log('json = ' + json);
           process.stdout.write(json + EOL);
         })
@@ -86,7 +86,7 @@ export class JsonCat {
           // console.log('content = ' + content);
           if (!err) {
             let obj = JSON.parse(content);
-            let json = JSON.stringify(obj, null, indent);
+            let json = JSON.stringify(obj, null, this.indent);
             // console.log('json = ' + json);
             process.stdout.write(json + EOL);
           } else {
@@ -116,7 +116,7 @@ export class JsonCat {
           // console.log('content = ' + content);
         }
         let obj = JSON.parse(content);
-        if (merge && obj.constructor === Array) {
+        if (this.merge && obj.constructor === Array) {
           let arr = obj as any[];
           for (let a of arr) {
             jsonArr.push(a);
@@ -125,7 +125,7 @@ export class JsonCat {
           jsonArr.push(obj);
         }
       }
-      let json = JSON.stringify(jsonArr, null, indent);
+      let json = JSON.stringify(jsonArr, null, this.indent);
       // console.log('json = ' + json);
       process.stdout.write(json + EOL);
     }
