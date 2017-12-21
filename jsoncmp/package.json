@@ -1,0 +1,39 @@
+{
+  "name": "@jsjson/jsoncmp",
+  "version": "0.1.0",
+  "license": "MIT",
+  "keywords": [
+    "json",
+    "cat"
+  ],
+  "description": "JsonCmp utility - Compare two json files.",
+  "author": {
+    "name": "Harry Y",
+    "email": "sidewaybot@gmail.com",
+    "url": "https://gitlab.com/realharry"
+  },
+  "repository": "https://gitlab.com/jsjson/tools.git",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "bin": {
+    "jsoncmp": "./scripts/jsoncmp"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.0",
+    "@types/node": "^7.0.42",
+    "ts-node": "^2.1.2",
+    "tslint": "^4.5.1",
+    "tslint-eslint-rules": "^3.5.1",
+    "typescript": "^2.4.2"
+  },
+  "engines": {
+    "node": ">=6.10.0"
+  }
+}

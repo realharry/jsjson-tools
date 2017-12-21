@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+var jsoncmp = require('../dist/index.js');
+jsoncmp;
+
