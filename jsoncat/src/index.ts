@@ -47,6 +47,7 @@ export class JsonCat {
 
     let len = files.length;
     if (len == 0) {
+      let self = this;
       // console.log("Input your JSON files.")
 
       // tbd: readFromStdin() currently does not work.
@@ -62,11 +63,12 @@ export class JsonCat {
       }).on('close', function () {
         // console.log('close: content = ' + content);
         let obj = JSON.parse(content);
-        let json = JSON.stringify(obj, null, this.indent);
+        let json = JSON.stringify(obj, null, self.indent);
         // console.log('json = ' + json);
         process.stdout.write(json + EOL);
       })
     } else if (len == 1) {
+      let self = this;
       let f = files[0];
       if (f == '-') {
         let content = '';
@@ -76,7 +78,7 @@ export class JsonCat {
         }).on('close', function () {
           // console.log('close: content = ' + content);
           let obj = JSON.parse(content);
-          let json = JSON.stringify(obj, null, this.indent);
+          let json = JSON.stringify(obj, null, self.indent);
           // console.log('json = ' + json);
           process.stdout.write(json + EOL);
         })
@@ -86,7 +88,7 @@ export class JsonCat {
           // console.log('content = ' + content);
           if (!err) {
             let obj = JSON.parse(content);
-            let json = JSON.stringify(obj, null, this.indent);
+            let json = JSON.stringify(obj, null, self.indent);
             // console.log('json = ' + json);
             process.stdout.write(json + EOL);
           } else {
