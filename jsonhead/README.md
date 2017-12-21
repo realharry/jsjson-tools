@@ -3,7 +3,7 @@
 
 `jsonhead` reads multiple JSON files and prints out the first 4 nodes of each JSON 
 to the stdout, with the file name headers.
-When a single JSON file is given, the file name header is never printed.
+When a single JSON file is given, the file name header is not printed.
 When no JSON file is given, it reads JSON from the stdin.
 
 
